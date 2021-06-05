@@ -1,16 +1,20 @@
 # CUSTOM BUTTON 
-## (SHAPE, BACKGROUND COLOR, TEXTCOLOR, BACKGROUND, STATE (pressed, focused, default…).
-## Sự khác biệt khi custom button trong theme AppCompat và Material
+(SHAPE, BACKGROUND COLOR, TEXTCOLOR, BACKGROUND, STATE (pressed, focused, default…).
+
 ## Different from between custom Button in AppCombat & Material Theme.
 
-## I.	Using Appcombat or Material theme.
+## I.Using Appcombat or Material theme.
 For using theme:
 Open file AndroidManifest:
  
+ ![screen](https://github.com/huyhoangse97/ButtonTemplate/blob/master/medias/image0.png)
+ 
 Change theme at highlight line.
 You can choose default theme or custom your theme.
-Default theme:
-###	AppCompat:
+
+## Default theme:
+
+### AppCompat:
 <ul>
 <li>Theme.AppCompat</li>
 <li>Theme.AppCompat.Light</li>
@@ -18,7 +22,8 @@ Default theme:
 <li>Theme. AppCompat.Light.NoActionBar</li>
 <li>Theme.AppCompat.Daynight</li>
 </ul>	
-###	Material:
+ 
+### Material:
 <ul>
 <li>Theme.MaterialComponents.Bridge</li>
 <li>Theme.MaterialComponents.Light.Bridge</li>
@@ -28,23 +33,41 @@ Default theme:
 	 
 ### In addition, you can custom your theme.
 Declare your theme like as a style, parent=”above_themes” like as you want.
-Example:
+	 
+### Sample
+	 
+ ![screen](https://github.com/huyhoangse97/ButtonTemplate/blob/master/medias/image1.png)
+  
+## II.Custom button.
  
-## II.	Custom button.
+### 1.AppCompat theme:
+ 
+Button’s attributes (shape, color, state) can be able custom in a file drawable 
+	
+>(res/drawable/your_custom.xml file).
 
-### 1.	AppCompat theme:
-	Tất cả custom về button (shape, color, state) được gói gọn trong một file drawable và file drawable này chỉ được set trong background.
-	Button’s attributes (shape, color, state) can be able custom in a file drawable (res/drawable/your_custom.xml file).
- 
 Look the following image below
+	 
+ ![screen](https://github.com/huyhoangse97/ButtonTemplate/blob/master/medias/image2.png)
  
-In layout file, assign: android:background=”@drawable/your_custom”
+In layout file, assign:
+	
+`android:background=”@drawable/your_custom”`
+	 
+ ![screen](https://github.com/huyhoangse97/ButtonTemplate/blob/master/medias/image3.png)
  
-### 2.	Material Theme:
-Material Button only use in material theme. Let’s config application theme taking Material theme.
+### 2.Material Theme:
+Material Button only use in material theme. 
+	 
+Let’s config application theme taking Material theme.
+	
 Assign background attribute by @drawable custom file won’t be applied like as AppCompat.
+	 
 The button backgroundTint will get default material color. You can adjust it by: set attribute backgroundTint.
-Create a color adjustment file in res/color/your_color_custom.xml
+	
+Create a color adjustment file in **res/color/your_color_custom.xml**
+ 
+```XML
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android" >
     <item android:state_focused="true"
@@ -57,16 +80,41 @@ Create a color adjustment file in res/color/your_color_custom.xml
 <!--    Default-->
     <item android:color="#6ec6ff"/>
 
-</selector>
+```
 
 In button, you can set 
+  
+```XML
 android:backgroundTint="@color/your_color_custom"
+```
 
 Material Theme also support for colorText custom and shape custom:
-android:textColor="@color/button_text_color"
+	
+**With color**
 
-With Shape:
+Declare text color drawable:
+	
+`XML
+	<?xml version="1.0" encoding="utf-8"?>
+	<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+	    <item android:state_pressed="true"
+		android:color="@color/grey_dark"/> <!-- pressed -->
+	    <item android:state_focused="true"
+		android:color="@color/blue_primary"/> <!-- focused -->
+	    <item android:color="@color/white"/> <!-- default -->
+	</selector>
+	`
+	
+Apply text color:
+	
+`XML
+	android:textColor="@color/button_text_color"`
+
+**With Shape:**
+	
 Declare shape style: 
+  
+```XML
 <style name="ShapeAppearanceOverlay.Cut.Style2">
     <item name="cornerSize">25%</item>
     <item name="cornerFamily">cut</item>
@@ -78,14 +126,21 @@ Declare shape style:
     <item name="cornerSize">50%</item>
     <item name="cornerFamily">rounded</item>
 </style>
+```
 
 Apply shape style:
+	
+```XML
 app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Circle"
+```
 
- 
 You can reduce manipulations by combine all attribute in style and apply only style in layout.
-Example: 
+	
+ **Example:**
+	
 Declare style
+	
+```XML
 <style name="MaterialButtonStyle" parent="Widget.MaterialComponents.Button.TextButton">
     <item name="backgroundTint">@color/materialbutton_state_color_style1</item>
     <item name="android:textColor">@color/button_text</item>
@@ -99,14 +154,21 @@ Declare style
     <item name="android:layout_gravity">center</item>
 </style>
 
+```
+
 Apply style:
-style="@style/MaterialButtonStyle"
+	
+`XML
+	style="@style/MaterialButtonStyle"`
 
-Some custom button result:
-
- 
-
-Notics: When using material design and style.
+**Some custom button result:**
+	
+![screen](https://github.com/huyhoangse97/ButtonTemplate/blob/master/medias/image4.png)
+	
+**Notics**: When using material design and style.
+	
 If you assign background by drawable file.
+	
 The shape, stroke will be affect by drawable size.
+	
 But the background Tint will be applied by style or colorPrimary.
