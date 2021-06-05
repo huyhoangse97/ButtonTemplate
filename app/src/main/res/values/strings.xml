@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ButtonTemplate</string>
+    <string name="appcompat_button_text">Appcompat Button</string>
+    <string name="material_button">Material Button</string>
+</resources>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MaterialButtonStyle" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="backgroundTint">@color/materialbutton_state_color_style1</item>
+        <item name="android:textColor">@color/button_text</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.Cut.Style2</item>
+        <item name="drawableTint">@color/drawable_tint</item>
+        <item name="strokeColor">@color/stroke_color2</item>
+        <item name="strokeWidth">@dimen/button_stroke_width</item>
+        <item name="android:padding">@dimen/normal_button_padding</item>
+        <item name="android:layout_margin">@dimen/normal_button_margin</item>
+        <item name="android:textSize">@dimen/normal_button_text_size</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="MaterialButtonBlack" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="backgroundTint">@color/black</item>
+    </style>
+
+    <style name="MaterialStyleCustom1" parent="Widget.MaterialComponents.Button">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlayCustomRound</item>
+        <item name="backgroundTint">@color/black</item>
+    </style>
+
+
+    <style name="AppThemeCustom" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearanceOverlay.Cut.Medium</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearanceOverlay.Cut.Medium</item>
+    </style>
+
+
+    <style name="MaterialButtonStyle.Circle" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.Circle</item>
+        <item name="backgroundTint">@color/materialbutton_state_color_style3</item>
+        <item name="android:textColor">@color/button_text</item>
+    </style>
+
+    <style name="MaterialButtonStyle.Circle.Outline" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.Circle</item>
+        <item name="backgroundTint">@color/materialbutton_state_color_style3</item>
+        <item name="android:textColor">@color/button_text2</item>
+    </style>
+
+    <dimen name="normal_button_text_size">20sp</dimen>
+    <dimen name="normal_button_padding">10sp</dimen>
+    <dimen name="normal_button_margin">10sp</dimen>
+</resources>

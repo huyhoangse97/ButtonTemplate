@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <!--    Good job-->
+    <!--    custom Button by Background Drawable-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                style="@style/MaterialButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_assistant_24"
+                android:text="Visa Progress"/>
+
+            <Button
+                style="@style/MaterialButtonStyle"
+                android:background="@drawable/button_style3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/material_button"
+                android:drawableTop="@drawable/ic_baseline_assistant_24"
+                android:drawableTint="@color/green" />
+
+<!--                Using floatting action button later-->
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:layout_gravity="center"
+                android:textAlignment="gravity"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlayCustomStyle1"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:text="MaterialButton"
+                android:textColor="@color/white"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:backgroundTint="@color/materialbutton_state_color_style2"
+                android:text="@string/appcompat_button_text"
+                android:textColor="@color/button_text" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clipChildren="false"
+                app:cardElevation="5dp"
+                app:strokeColor="@color/grey"
+                app:strokeWidth="1dp"
+                app:cardBackgroundColor="@color/white"
+                tools:context=".MainActivity">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:padding="32dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/theme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:textSize="20sp"
+                        android:text="@string/material_button"
+                        android:textColor="@color/button_text"
+                        style="@style/MaterialButtonStyle"
+                        app:layout_constraintBottom_toTopOf="@id/cut"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/cut"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:padding="16dp"
+                        android:textSize="20sp"
+                        android:text="@string/material_button"
+                        android:textAppearance="?textAppearanceHeadline5"
+                        android:textColor="@color/button_text"
+                        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Cut"
+                        android:backgroundTint="@color/materialbutton_state_color_style2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/theme"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/circle_button"
+                android:layout_width="100sp"
+                android:layout_height="100sp"
+                android:padding="16dp"
+                android:textSize="20sp"
+                android:text="@string/material_button"
+                android:textColor="@color/button_text"
+                style="@style/MaterialButtonStyle.Circle.Outline"
+                app:strokeColor="@color/black"
+                app:strokeWidth="2dp"
+                android:layout_gravity="center"
+                app:layout_constraintBottom_toTopOf="@id/cut"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

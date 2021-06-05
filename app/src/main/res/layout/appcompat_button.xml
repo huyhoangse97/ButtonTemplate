@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:text="@string/app_name"
+            android:textColor="@color/black" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/button_style2"
+            app:icon="@drawable/ic_baseline_assistant_24"
+            android:padding="10dp"
+            android:text="Visa Progress"
+            android:textColor="@android:color/white"/>
+
+        <Button
+            style="@style/AppCompatButtonStyleCustom1"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:text="@string/appcompat_button_text"
+            android:textColor="@color/black" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10sp"
+            android:background="@drawable/button_style1"
+            android:drawableLeft="@drawable/ic_baseline_assistant_24"
+            android:drawableTint="@color/white"
+            android:padding="10dp"
+            android:text="Visa Progress"
+            android:textColor="@android:color/white"
+            tools:targetApi="lollipop" />
+
+        <!--    Good job-->
+        <!--    custom Button by Background Drawable-->
+        <Button
+            android:background="@drawable/button_style3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10sp"
+            android:drawableLeft="@drawable/ic_baseline_assistant_24"
+            android:drawableTint="@color/white"
+            android:padding="10dp"
+            android:text="Visa Progress"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            tools:targetApi="lollipop" />
+
+        <Button
+            style="@style/AppCompatButtonStyleCustom1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10sp"
+            android:drawableLeft="@drawable/ic_baseline_assistant_24"
+            android:padding="10dp"
+            android:text="Visa Progress"
+            android:textSize="20sp"
+            android:textColor="@color/button_text"
+            tools:targetApi="lollipop" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

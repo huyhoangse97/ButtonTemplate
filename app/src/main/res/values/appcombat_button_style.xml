@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppCompatButtonStyleCustom1" parent="Widget.AppCompat.Button">
+        <item name="backgroundTint">@color/white</item>
+        <item name="background">@color/green</item>
+        <item name="drawableTint">@color/black</item>
+    </style>
+
+    <style name="AppCompatButtonStyleCustom2" parent="Widget.AppCompat.Button">
+        <item name="color">@color/materialbutton_state_color_style1</item>
+    </style>
+</resources>
