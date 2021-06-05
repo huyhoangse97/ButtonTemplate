@@ -103,6 +103,7 @@ Declare text color drawable:
 		android:color="@color/blue_primary"/> <!-- focused -->
 	    <item android:color="@color/white"/> <!-- default -->
 	</selector>
+
 ```
 	
 Apply text color:
