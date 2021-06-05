@@ -27,35 +27,19 @@
 
             <Button
                 style="@style/MaterialButtonStyle"
-                android:background="@drawable/button_style3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:text="@string/material_button"
-                android:drawableTop="@drawable/ic_baseline_assistant_24"
-                android:drawableTint="@color/green" />
-
-<!--                Using floatting action button later-->
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:layout_width="match_parent"
-                android:layout_height="50sp"
-                android:layout_gravity="center"
-                android:textAlignment="gravity"
-                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlayCustomStyle1"/>
+                android:drawableTop="@drawable/ic_baseline_assistant_24" />
 
             <com.google.android.material.button.MaterialButton
-                android:layout_width="match_parent"
+                style="@style/MaterialButtonStyle"
+                android:layout_width="wrap_content"
                 android:layout_height="50sp"
-                android:text="MaterialButton"
+                android:text="MaterialButton2"
                 android:textColor="@color/white"
                 />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="50sp"
-                android:backgroundTint="@color/materialbutton_state_color_style2"
-                android:text="@string/appcompat_button_text"
-                android:textColor="@color/button_text" />
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="wrap_content"
@@ -65,8 +49,7 @@
                 app:cardElevation="5dp"
                 app:strokeColor="@color/grey"
                 app:strokeWidth="1dp"
-                app:cardBackgroundColor="@color/white"
-                tools:context=".MainActivity">
+                app:cardBackgroundColor="@color/white">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="wrap_content"
