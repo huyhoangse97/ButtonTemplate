@@ -94,7 +94,7 @@ Material Theme also support for colorText custom and shape custom:
 
 Declare text color drawable:
 	
-`XML
+```XML
 	<?xml version="1.0" encoding="utf-8"?>
 	<selector xmlns:android="http://schemas.android.com/apk/res/android" >
 	    <item android:state_pressed="true"
@@ -102,8 +102,7 @@ Declare text color drawable:
 	    <item android:state_focused="true"
 		android:color="@color/blue_primary"/> <!-- focused -->
 	    <item android:color="@color/white"/> <!-- default -->
-	</selector>
-	`
+	</selector>```
 	
 Apply text color:
 	
